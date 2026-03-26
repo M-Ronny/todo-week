@@ -19,6 +19,32 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
+app.get('/', (request, response) => {
+    db.collection('todos').find().toArray()
+    .then(data => {
+        response.render('index.ejs', {info: data})
+    })
+    .catch(error => console.error(error))
+})
+
+app.post('/addRapper', (request, response) => {
+    db.collection('todos').insertOne(request.body)
+    .then(result => {
+        console.log('To do list added')
+        response.redirect('/')
+    })
+    .catch(error => console.error(error))
+})
+
+app.delete('/deleteRapper', (request, response) => {
+    db.collection('todos').deleteOne({stageName: request.body.stageNameS})
+    .then(result => {
+        console.log('To do Deleted')
+        response.json('To do Deleted')
+    })
+    .catach(error => console.error(error))
+})
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
