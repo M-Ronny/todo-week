@@ -6,6 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>todos</h1>
+    <nav>
+        <h1>TO DO WEEK LIST</h1>
+    </nav>
+
+    <form action="/addTodo" method="POST">
+        <input type="text" placeholder="TO DO" name="todo">
+        <select>
+            <option>Sunday</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+        </select>
+        <button>Submit</button>
+    </form>
+
+    <section class="monday"></section>
+    <section class="tuesday"></section>
+    <section class="wednesday"></section>
+    <section class="thursday"></section>
+    <section class="friday"></section>
+    <section class="saturday"></section>
+    <section class="sunday"></section>
 </body>
 </html>
