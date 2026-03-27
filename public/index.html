@@ -15,23 +15,43 @@
     <form action="/addTodo" method="POST">
         <input type="text" placeholder="TO DO" name="todo">
         <select>
-            <option>Sunday</option>
             <option>Monday</option>
             <option>Tuesday</option>
             <option>Wednesday</option>
             <option>Thursday</option>
             <option>Friday</option>
             <option>Saturday</option>
+            <option>Sunday</option>
         </select>
         <button>Submit</button>
     </form>
 
-    <section class="monday"></section>
-    <section class="tuesday"></section>
-    <section class="wednesday"></section>
-    <section class="thursday"></section>
-    <section class="friday"></section>
-    <section class="saturday"></section>
-    <section class="sunday"></section>
+    <section class="monday weekday">
+        <h1>Monday</h1>
+    </section>
+
+    <section class="tuesday weekday">
+        <h1>Tuesday</h1>
+    </section>
+
+    <section class="wednesday weekday">
+        <h1>Wednesday</h1>
+    </section>
+
+    <section class="thursday weekday">
+        <h1>Thursday</h1>
+    </section>
+
+    <section class="friday weekday">
+        <h1>Friday</h1>
+    </section>
+
+    <section class="saturday weekend">
+        <h1>Saturday</h1>
+    </section>
+
+    <section class="sunday weekend">
+        <h1>Sunday</h1>
+    </section>
 </body>
 </html>
