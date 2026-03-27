@@ -10,9 +10,37 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+nav {
+  height: 100px;
+}
 
+form {
+  text-align: center;
+  height: 100px;
+}
 
+section {
+  border: solid black 1px;
+  height: 100px;
+  float: left;
+  width: 16%;
+  margin: 0 5px;
+}
 
+.weekday {
+  height: 450px;
+}
+
+.weekend {
+  height: 225px;
+}
+
+.sunday {
+  float: right;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+h1 {
+  text-align: center;
+}
