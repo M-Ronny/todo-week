@@ -27,8 +27,8 @@ app.get('/', (request, response) => {
     .catch(error => console.error(error))
 })
 
-app.post('/addRapper', (request, response) => {
-    db.collection('todos').insertOne(request.body)
+app.post('/addTodo', (request, response) => {
+    db.collection('todos').insertOne({todo: request.body.todo, day: request.body.day, complete: false})
     .then(result => {
         console.log('To do list added')
         response.redirect('/')
