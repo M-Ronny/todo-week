@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <h1>TO DO WEEK LIST</h1>
+    </nav>
+
+    <form action="/addTodo" method="POST">
+        <input type="text" placeholder="TO DO" name="todo">
+        <select name="day">
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+        </select>
+        <button>Submit</button>
+    </form>
+
+    <section class="monday weekday">
+        <h1>Monday</h1>
+    </section>
+
+    <section class="tuesday weekday">
+        <h1>Tuesday</h1>
+    </section>
+
+    <section class="wednesday weekday">
+        <h1>Wednesday</h1>
+    </section>
+
+    <section class="thursday weekday">
+        <h1>Thursday</h1>
+    </section>
+
+    <section class="friday weekday">
+        <h1>Friday</h1>
+    </section>
+
+    <section class="saturday weekend">
+        <h1>Saturday</h1>
+    </section>
+
+    <section class="sunday weekend">
+        <h1>Sunday</h1>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
