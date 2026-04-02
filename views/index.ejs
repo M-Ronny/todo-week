@@ -28,32 +28,137 @@
 
     <section class="monday weekday">
         <h1>Monday</h1>
+        <ul>
+            <% for (let i = 0; i < info.length; i++) { %>
+                <% if (info[i].day === 'Monday' && info[i].complete === true) {%>
+                    <li>
+                        <span class="complete"><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } else if (info[i].day === 'Monday') { %>
+                    <li>
+                        <span><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } %>
+            <% } %>
+        </ul>    
     </section>
 
     <section class="tuesday weekday">
         <h1>Tuesday</h1>
-    </section>
+        <ul>
+            <% for (let i = 0; i < info.length; i++) { %>
+                <% if (info[i].day === 'Tuesday' && info[i].complete === true) {%>
+                    <li>
+                        <span class="complete"><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } else if (info[i].day === 'Tuesday') { %>
+                    <li>
+                        <span><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } %>
+            <% } %>
+        </ul>   
+        </section>
 
     <section class="wednesday weekday">
         <h1>Wednesday</h1>
+        <ul>
+            <% for (let i = 0; i < info.length; i++) { %>
+                <% if (info[i].day === 'Wednesday' && info[i].complete === true) {%>
+                    <li>
+                        <span class="complete"><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } else if (info[i].day === 'Wednesday') { %>
+                    <li>
+                        <span><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } %>
+            <% } %>
+        </ul>   
     </section>
 
     <section class="thursday weekday">
         <h1>Thursday</h1>
+        <ul>
+            <% for (let i = 0; i < info.length; i++) { %>
+                <% if (info[i].day === 'Thursday' && info[i].complete === true) {%>
+                    <li>
+                        <span class="complete"><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } else if (info[i].day === 'Thursday') { %>
+                    <li>
+                        <span><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } %>
+            <% } %>
+        </ul>   
     </section>
 
     <section class="friday weekday">
         <h1>Friday</h1>
+        <ul>
+            <% for (let i = 0; i < info.length; i++) { %>
+                <% if (info[i].day === 'Friday' && info[i].complete === true) {%>
+                    <li>
+                        <span class="complete"><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } else if (info[i].day === 'Friday') { %>
+                    <li>
+                        <span><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } %>
+            <% } %>
+        </ul>
     </section>
 
     <section class="saturday weekend">
         <h1>Saturday</h1>
+        <ul>
+            <% for (let i = 0; i < info.length; i++) { %>
+                <% if (info[i].day === 'Saturday' && info[i].complete === true) {%>
+                    <li>
+                        <span class="complete"><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } else if (info[i].day === 'Saturday') { %>
+                    <li>
+                        <span><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } %>
+            <% } %>
+        </ul>   
     </section>
 
     <section class="sunday weekend">
         <h1>Sunday</h1>
+        <ul>
+            <% for (let i = 0; i < info.length; i++) { %>
+                <% if (info[i].day === 'Sunday' && info[i].complete === true) {%>
+                    <li>
+                        <span class="complete"><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } else if (info[i].day === 'Sunday') { %>
+                    <li>
+                        <span><%= info[i].todo %></span>
+                        <span>delete</span>
+                    </li>
+                <% } %>
+            <% } %>   
+        </ul>
     </section>
-
+        
     <script src="js/main.js"></script>
 </body>
 </html>
