@@ -36,6 +36,22 @@ app.post('/addTodo', (request, response) => {
     .catch(error => console.error(error))
 })
 
+app.put('/markComplete', (request, response) => {
+    db.collection('todos').updateOne({todo: request.body.itemFromJS, day: request.body.dayFromJS}, {
+        $set: {
+            complete: true
+        }
+    }, {
+        sort:{_id: -1},
+        upsert: false
+    })
+    .then(result => {
+        console.log('Marked Complete')
+        response.json('Marked Complete')
+    })
+    .catch(error => console.error(error))
+})
+
 app.delete('/deleteRapper', (request, response) => {
     db.collection('todos').deleteOne({stageName: request.body.stageNameS})
     .then(result => {
