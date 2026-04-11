@@ -38,7 +38,7 @@ app.post('/addTodo', (request, response) => {
 })
 
 app.put('/markComplete', (request, response) => {
-    db.collection('todos').updateOne({todo: request.body.itemFromJS, day: request.body.dayFromJS}, {
+    db.collection('todos').updateOne({_id: new ObjectId(request.body.idFromJS)}, {
         $set: {
             complete: true
         }
