@@ -32,13 +32,13 @@
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Monday' && info[i].complete === true) {%>
                     <li>
-                        <span class="todo Monday complete"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Monday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } else if (info[i].day === 'Monday') { %>
                     <li>
-                        <span class="todo Monday"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Monday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } %>
             <% } %>
@@ -51,13 +51,13 @@
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Tuesday' && info[i].complete === true) {%>
                     <li>
-                        <span class="todo Tuesday complete"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Tuesday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } else if (info[i].day === 'Tuesday') { %>
                     <li>
-                        <span class="todo Tuesday"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Tuesday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } %>
             <% } %>
@@ -70,13 +70,13 @@
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Wednesday' && info[i].complete === true) {%>
                     <li>
-                        <span class="todo Wednesday complete"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Wednesday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } else if (info[i].day === 'Wednesday') { %>
                     <li>
-                        <span class="todo Wednesday"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Wednesday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } %>
             <% } %>
@@ -89,13 +89,13 @@
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Thursday' && info[i].complete === true) {%>
                     <li>
-                        <span class="todo Thursday complete"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Thursday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } else if (info[i].day === 'Thursday') { %>
                     <li>
-                        <span class="todo Thursday"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Thursday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } %>
             <% } %>
@@ -108,13 +108,13 @@
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Friday' && info[i].complete === true) {%>
                     <li>
-                        <span class="todo Friday complete"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Friday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } else if (info[i].day === 'Friday') { %>
                     <li>
-                        <span class="todo Friday"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Friday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } %>
             <% } %>
@@ -127,13 +127,13 @@
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Saturday' && info[i].complete === true) {%>
                     <li>
-                        <span class="todo Saturday complete"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Saturday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } else if (info[i].day === 'Saturday') { %>
                     <li>
-                        <span class="todo Saturday"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="todo Saturday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } %>
             <% } %>
@@ -147,12 +147,12 @@
                 <% if (info[i].day === 'Sunday' && info[i].complete === true) {%>
                     <li>
                         <span class="todo Sunday complete"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } else if (info[i].day === 'Sunday') { %>
                     <li>
                         <span class="todo Sunday"><%= info[i].todo %></span>
-                        <span class="delete">delete</span>
+                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } %>
             <% } %>   
