@@ -146,12 +146,12 @@
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Sunday' && info[i].complete === true) {%>
                     <li>
-                        <span class="todo Sunday complete"><%= info[i].todo %></span>
+                        <span class="todo Sunday complete data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
                         <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } else if (info[i].day === 'Sunday') { %>
                     <li>
-                        <span class="todo Sunday"><%= info[i].todo %></span>
+                        <span class="todo Sunday" data-id="<%= info[i]._id%>"><%= info[i].todo %></span>
                         <span class="delete" data-id="<%= info[i]._id %>">delete</span>
                     </li>
                 <% } %>
