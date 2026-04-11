@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
+const { ObjectId } = require('mongodb')
 const PORT = 9000
 require('dotenv').config()
 
@@ -52,13 +53,13 @@ app.put('/markComplete', (request, response) => {
     .catch(error => console.error(error))
 })
 
-app.delete('/deleteRapper', (request, response) => {
-    db.collection('todos').deleteOne({stageName: request.body.stageNameS})
+app.delete('/deleteTodo', (request, response) => {
+    db.collection('todos').deleteOne({_id: new ObjectId(request.body.idFromJS)})
     .then(result => {
         console.log('To do Deleted')
         response.json('To do Deleted')
     })
-    .catach(error => console.error(error))
+    .catch(error => console.error(error))
 })
 
 app.listen(PORT, () => {
