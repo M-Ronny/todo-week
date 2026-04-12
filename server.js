@@ -53,6 +53,22 @@ app.put('/markComplete', (request, response) => {
     .catch(error => console.error(error))
 })
 
+app.put('/incompleteTodo', (request, response) => {
+    db.collection('todos').updateOne({_id: new ObjectId(request.body.idFromJS)}, {
+        $set: {
+            complete: false
+        }
+    }, {
+        sort:{_id: -1},
+        upsert: false
+    })
+    .then(result => {
+        console.log('to do now Incomplete')
+        response.json('to do now Incomplete')
+    })
+    .catch(error => console.error(error))
+})
+
 app.delete('/deleteTodo', (request, response) => {
     db.collection('todos').deleteOne({_id: new ObjectId(request.body.idFromJS)})
     .then(result => {
