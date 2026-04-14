@@ -12,6 +12,7 @@
 /*******************************************/
 nav {
   height: 100px;
+  background: red;
 }
 
 form {
@@ -20,11 +21,16 @@ form {
 }
 
 section {
-  border: solid black 1px;
+  /* border: solid black 1px; */
   height: 100px;
   float: left;
+  width: 250px;
   width: 16%;
   margin: 0 5px;
+}
+
+.mon {
+  margin-left: 3px;
 }
 
 .weekday {
@@ -43,4 +49,21 @@ section {
 /*******************************************/
 h1 {
   text-align: center;
+}
+
+.day {
+  border-bottom: solid black 3px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5%;
+  border-bottom: solid black 1px;
+}
+
+.complete {
+  text-decoration: line-through;
 }
