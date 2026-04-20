@@ -5,32 +5,31 @@
 /* Box Model Hack */
 *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 nav {
-  height: 100px;
-  background: red;
+  height: 75px;
+  background: #00529f;
+  padding: 1%;
 }
 
-form {
+.form {
+  height: 150px;
+  width: 100%;
   text-align: center;
-  height: 100px;
 }
 
-section {
-  /* border: solid black 1px; */
+.days {
   height: 100px;
   float: left;
   width: 250px;
-  width: 16%;
-  margin: 0 5px;
-}
-
-.mon {
-  margin-left: 3px;
+  width: 15%;
+  margin: 0 12px;
 }
 
 .weekday {
@@ -47,12 +46,53 @@ section {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+/* input, select, button {
+  display: block;
+} */
+
 h1 {
+  text-align: center;
+}
+
+.title {
+  color: #febe10;
+}
+
+form {
+  padding-top: 4%;
+}
+
+input, select, button {
+  height: 30px;
+  border-radius: 10px;
+}
+
+select, button {
+  width: 8%;
+  background: #00529f;
+  color: #febe10;
+  cursor: pointer;
+}
+
+input {
+  border: solid 2px #febe10;
+}
+
+select {
   text-align: center;
 }
 
 .day {
   border-bottom: solid black 3px;
+  margin-bottom: 3%;
+}
+
+li.gold {
+  border-bottom: solid #febe10 2px;
+}
+
+li.blue {
+  border-bottom: solid #00529f 2px;
 }
 
 ul {
@@ -61,9 +101,22 @@ ul {
 
 li {
   margin-bottom: 5%;
-  border-bottom: solid black 1px;
+  padding-bottom: 3%;
 }
 
 .complete {
   text-decoration: line-through;
+}
+
+span {
+  color: black;
+  cursor: pointer;
+}
+
+.gold {
+  color: #febe10;
+}
+
+.blue {
+  color: #00529f;
 }
