@@ -3,156 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do Week</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav>
-        <h1>TO DO WEEK LIST</h1>
+        <h1 class="title">TO DO WEEK LIST</h1>
     </nav>
 
-    <form action="/addTodo" method="POST">
-        <input type="text" placeholder="TO DO" name="todo">
-        <select name="day">
-            <option>Monday</option>
-            <option>Tuesday</option>
-            <option>Wednesday</option>
-            <option>Thursday</option>
-            <option>Friday</option>
-            <option>Saturday</option>
-            <option>Sunday</option>
-        </select>
-        <button>Submit</button>
-    </form>
+    <section class="form">
+        <form action="/addTodo" method="POST">
+            <input type="text" placeholder="TO DO" name="todo">
+            <select name="day">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+            <button>Submit</button>
+        </form>
+    </section>
 
-    <section class="monday weekday">
-        <h1>Monday</h1>
-        <ul>
+    <section class="weekday days">
+        <h1 class="day gold">Monday</h1>
+        <ul class="gold">
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Monday' && info[i].complete === true) {%>
-                    <li>
-                        <span class="Monday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="gold">
+                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } else if (info[i].day === 'Monday') { %>
-                    <li>
-                        <span class="not Monday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="gold">
+                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
         </ul>    
     </section>
 
-    <section class="tuesday weekday">
-        <h1>Tuesday</h1>
-        <ul>
+    <section class="weekday days">
+        <h1 class="day blue">Tuesday</h1>
+        <ul class="blue">
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Tuesday' && info[i].complete === true) {%>
-                    <li>
-                        <span class="Tuesday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="blue">
+                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } else if (info[i].day === 'Tuesday') { %>
-                    <li>
-                        <span class="not Tuesday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="blue">
+                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
         </ul>   
         </section>
 
-    <section class="wednesday weekday">
-        <h1>Wednesday</h1>
-        <ul>
+    <section class="weekday days">
+        <h1 class="day gold">Wednesday</h1>
+        <ul class="gold">
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Wednesday' && info[i].complete === true) {%>
-                    <li>
-                        <span class="Wednesday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="gold">
+                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } else if (info[i].day === 'Wednesday') { %>
-                    <li>
-                        <span class="not Wednesday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="gold">
+                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
         </ul>   
     </section>
 
-    <section class="thursday weekday">
-        <h1>Thursday</h1>
-        <ul>
+    <section class="weekday days">
+        <h1 class="day blue">Thursday</h1>
+        <ul class="blue">
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Thursday' && info[i].complete === true) {%>
-                    <li>
-                        <span class="Thursday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="blue">
+                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } else if (info[i].day === 'Thursday') { %>
-                    <li>
-                        <span class="not Thursday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="blue">
+                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
         </ul>   
     </section>
 
-    <section class="friday weekday">
-        <h1>Friday</h1>
-        <ul>
+    <section class="weekday days">
+        <h1 class="day gold">Friday</h1>
+        <ul class="gold">
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Friday' && info[i].complete === true) {%>
-                    <li>
-                        <span class="Friday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="gold">
+                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } else if (info[i].day === 'Friday') { %>
-                    <li>
-                        <span class="not Friday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="gold">
+                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
         </ul>
     </section>
 
-    <section class="saturday weekend">
-        <h1>Saturday</h1>
-        <ul>
+    <section class="weekend days">
+        <h1 class="day blue">Saturday</h1>
+        <ul class="blue">
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Saturday' && info[i].complete === true) {%>
-                    <li>
-                        <span class="Saturday complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="blue">
+                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } else if (info[i].day === 'Saturday') { %>
-                    <li>
-                        <span class="not Saturday" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="blue">
+                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
+                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
         </ul>   
     </section>
 
-    <section class="sunday weekend">
-        <h1>Sunday</h1>
-        <ul>
+    <section class="sunday weekend days">
+        <h1 class="day gold">Sunday</h1>
+        <ul class="gold">
             <% for (let i = 0; i < info.length; i++) { %>
                 <% if (info[i].day === 'Sunday' && info[i].complete === true) {%>
-                    <li>
-                        <span class="Sunday complete data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="gold">
+                        <span class="complete" data-id="<%= info[i]._id%>"><%= info[i].todo %></span>
+                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } else if (info[i].day === 'Sunday') { %>
-                    <li>
-                        <span class="not Sunday" data-id="<%= info[i]._id%>"><%= info[i].todo %></span>
-                        <span class="delete" data-id="<%= info[i]._id %>">delete</span>
+                    <li class="gold">
+                        <span class="not" data-id="<%= info[i]._id%>"><%= info[i].todo %></span>
+                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>   
