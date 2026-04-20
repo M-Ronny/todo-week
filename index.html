@@ -3,54 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do Week</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav>
-        <h1>TO DO WEEK LIST</h1>
+        <h1 class="title">TO DO WEEK LIST</h1>
     </nav>
 
-    <form action="/addTodo" method="POST">
-        <input type="text" placeholder="TO DO" name="todo">
-        <select name="day">
-            <option>Monday</option>
-            <option>Tuesday</option>
-            <option>Wednesday</option>
-            <option>Thursday</option>
-            <option>Friday</option>
-            <option>Saturday</option>
-            <option>Sunday</option>
-        </select>
-        <button>Submit</button>
-    </form>
+    <section class="form">
+        <form action="/addTodo" method="POST">
+            <input type="text" placeholder="TO DO" name="todo">
+            <select name="day">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+            <button>Submit</button>
+        </form>
+    </section>
 
-    <section class="monday weekday">
+    <section class="weekday days">
         <h1>Monday</h1>
     </section>
 
-    <section class="tuesday weekday">
+    <section class="weekday days">
         <h1>Tuesday</h1>
     </section>
 
-    <section class="wednesday weekday">
+    <section class="weekday days">
         <h1>Wednesday</h1>
     </section>
 
-    <section class="thursday weekday">
+    <section class="weekday days">
         <h1>Thursday</h1>
     </section>
 
-    <section class="friday weekday">
+    <section class="weekday days">
         <h1>Friday</h1>
     </section>
 
-    <section class="saturday weekend">
+    <section class="weekend days">
         <h1>Saturday</h1>
     </section>
 
-    <section class="sunday weekend">
+    <section class="sunday weekend days">
         <h1>Sunday</h1>
     </section>
 
