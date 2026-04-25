@@ -18,7 +18,7 @@ async function complete() {
     const id = this.dataset.id
 
     try {
-        const response = await fetch('markComplete', {
+        const response = await fetch('todoWeek/markComplete', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -37,7 +37,7 @@ async function deleteTodo() {
     const id = this.dataset.id
 
     try {
-        const response = await fetch('deleteTodo', {
+        const response = await fetch('todoWeek/deleteTodo', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -56,7 +56,7 @@ async function incomplete() {
     const id = this.dataset.id
 
     try {
-        const response = await fetch('incompleteTodo', {
+        const response = await fetch('todoWeek/markIncomplete', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

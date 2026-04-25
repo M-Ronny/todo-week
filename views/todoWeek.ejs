@@ -14,7 +14,7 @@
     </nav>
 
     <section class="form">
-        <form action="/addTodo" method="POST">
+        <form action="/todoWeek/createTodo" method="POST">
             <input type="text" placeholder="TO DO" name="todo">
             <select name="day">
                 <option>Monday</option>
@@ -32,16 +32,16 @@
     <section class="weekday days">
         <h1 class="day gold">Monday</h1>
         <ul class="gold">
-            <% for (let i = 0; i < info.length; i++) { %>
-                <% if (info[i].day === 'Monday' && info[i].complete === true) {%>
+            <% for (let i = 0; i < todos.length; i++) { %>
+                <% if (todos[i].day === 'Monday' && todos[i].completed === true) {%>
                     <li class="gold">
-                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="complete" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete gold" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
-                <% } else if (info[i].day === 'Monday') { %>
+                <% } else if (todos[i].day === 'Monday') { %>
                     <li class="gold">
-                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="not" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete gold" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
@@ -51,16 +51,16 @@
     <section class="weekday days">
         <h1 class="day blue">Tuesday</h1>
         <ul class="blue">
-            <% for (let i = 0; i < info.length; i++) { %>
-                <% if (info[i].day === 'Tuesday' && info[i].complete === true) {%>
+            <% for (let i = 0; i < todos.length; i++) { %>
+                <% if (todos[i].day === 'Tuesday' && todos[i].completed === true) {%>
                     <li class="blue">
-                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="complete" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete blue" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
-                <% } else if (info[i].day === 'Tuesday') { %>
+                <% } else if (todos[i].day === 'Tuesday') { %>
                     <li class="blue">
-                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="not" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete blue" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
@@ -70,16 +70,16 @@
     <section class="weekday days">
         <h1 class="day gold">Wednesday</h1>
         <ul class="gold">
-            <% for (let i = 0; i < info.length; i++) { %>
-                <% if (info[i].day === 'Wednesday' && info[i].complete === true) {%>
+            <% for (let i = 0; i < todos.length; i++) { %>
+                <% if (todos[i].day === 'Wednesday' && todos[i].completed === true) {%>
                     <li class="gold">
-                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="complete" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete gold" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
-                <% } else if (info[i].day === 'Wednesday') { %>
+                <% } else if (todos[i].day === 'Wednesday') { %>
                     <li class="gold">
-                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="not" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete gold" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
@@ -89,16 +89,16 @@
     <section class="weekday days">
         <h1 class="day blue">Thursday</h1>
         <ul class="blue">
-            <% for (let i = 0; i < info.length; i++) { %>
-                <% if (info[i].day === 'Thursday' && info[i].complete === true) {%>
+            <% for (let i = 0; i < todos.length; i++) { %>
+                <% if (todos[i].day === 'Thursday' && todos[i].completed === true) {%>
                     <li class="blue">
-                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="complete" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete blue" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
-                <% } else if (info[i].day === 'Thursday') { %>
+                <% } else if (todos[i].day === 'Thursday') { %>
                     <li class="blue">
-                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="not" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete blue" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
@@ -108,16 +108,16 @@
     <section class="weekday days">
         <h1 class="day gold">Friday</h1>
         <ul class="gold">
-            <% for (let i = 0; i < info.length; i++) { %>
-                <% if (info[i].day === 'Friday' && info[i].complete === true) {%>
+            <% for (let i = 0; i < todos.length; i++) { %>
+                <% if (todos[i].day === 'Friday' && todos[i].completed === true) {%>
                     <li class="gold">
-                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="complete" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete gold" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
-                <% } else if (info[i].day === 'Friday') { %>
+                <% } else if (todos[i].day === 'Friday') { %>
                     <li class="gold">
-                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="not" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete gold" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
@@ -127,16 +127,16 @@
     <section class="weekend days">
         <h1 class="day blue">Saturday</h1>
         <ul class="blue">
-            <% for (let i = 0; i < info.length; i++) { %>
-                <% if (info[i].day === 'Saturday' && info[i].complete === true) {%>
+            <% for (let i = 0; i < todos.length; i++) { %>
+                <% if (todos[i].day === 'Saturday' && todos[i].completed === true) {%>
                     <li class="blue">
-                        <span class="complete" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="complete" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete blue" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
-                <% } else if (info[i].day === 'Saturday') { %>
+                <% } else if (todos[i].day === 'Saturday') { %>
                     <li class="blue">
-                        <span class="not" data-id="<%= info[i]._id %>"><%= info[i].todo %></span>
-                        <span class="delete blue" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="not" data-id="<%= todos[i]._id %>"><%= todos[i].todo %></span>
+                        <span class="delete blue" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>
@@ -146,16 +146,16 @@
     <section class="sunday weekend days">
         <h1 class="day gold">Sunday</h1>
         <ul class="gold">
-            <% for (let i = 0; i < info.length; i++) { %>
-                <% if (info[i].day === 'Sunday' && info[i].complete === true) {%>
+            <% for (let i = 0; i < todos.length; i++) { %>
+                <% if (todos[i].day === 'Sunday' && todos[i].completed === true) {%>
                     <li class="gold">
-                        <span class="complete" data-id="<%= info[i]._id%>"><%= info[i].todo %></span>
-                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="complete" data-id="<%= todos[i]._id%>"><%= todos[i].todo %></span>
+                        <span class="delete gold" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
-                <% } else if (info[i].day === 'Sunday') { %>
+                <% } else if (todos[i].day === 'Sunday') { %>
                     <li class="gold">
-                        <span class="not" data-id="<%= info[i]._id%>"><%= info[i].todo %></span>
-                        <span class="delete gold" data-id="<%= info[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
+                        <span class="not" data-id="<%= todos[i]._id%>"><%= todos[i].todo %></span>
+                        <span class="delete gold" data-id="<%= todos[i]._id %>"><i class="fa-solid fa-delete-left"></i></span>
                     </li>
                 <% } %>
             <% } %>   

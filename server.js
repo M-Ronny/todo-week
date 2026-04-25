@@ -4,7 +4,7 @@ const app = express()
 // const { ObjectId } = require('mongodb')
 const connectDB = require('./config/database')
 const homeRoutes = require('./routes/home')
-const todoWeekRoutes = require('.routes/todoWeek')
+const todoWeekRoutes = require('./routes/todoWeek')
 // const PORT = 9000
 
 require('dotenv').config({path: './config/.env'})

@@ -1,6 +1,6 @@
 const express = require('express')
 const router =  express.Router()
-const todoWeekController = require('..controllers/todWeek')
+const todoWeekController = require('../controllers/todoWeek')
 
 router.get('/', todoWeekController.getTodoWeek)
 
