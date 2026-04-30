@@ -3,15 +3,15 @@ const Todo = require('../models/todoWeek')
 module.exports = {
     getTodoWeek: async (req, res) => {
         try {
-            const todoItems = await Todo.find()
-            res.render('todoWeek.ejs', {todos: todoItems})
+            const todoItems = await Todo.find({userId:req.user.id})
+            res.render('todoWeek.ejs', {todos: todoItems, user: req.user})
         } catch(err) {
             console.log(err)
         }
     },
     createTodo: async (req, res) => {
         try{
-            await Todo.create({todo: req.body.todo, day: req.body.day, completed: false})
+            await Todo.create({todo: req.body.todo, day: req.body.day, completed: false, userId: req.user.id})
             console.log('Todo has been added!')
             res.redirect('/todoWeek')
         } catch(err) {
