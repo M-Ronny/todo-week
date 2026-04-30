@@ -1,8 +1,9 @@
 const express = require('express')
 const router =  express.Router()
 const todoWeekController = require('../controllers/todoWeek')
+const { ensureAuth } = require('../middleware/auth')
 
-router.get('/', todoWeekController.getTodoWeek)
+router.get('/', ensureAuth, todoWeekController.getTodoWeek)
 
 router.post('/createTodo', todoWeekController.createTodo)
 
