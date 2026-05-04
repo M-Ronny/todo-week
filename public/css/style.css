@@ -50,11 +50,20 @@ nav {
   display: block;
 } */
 
+a {
+  float: left;
+  width: 40%;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #febe10;
+}
+
 h1 {
   text-align: center;
 }
 
 .title {
+  float: left;
   color: #febe10;
 }
 
