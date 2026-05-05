@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
+<body>    
+    <nav>
+        <h1 class="title signLogTitle">TO DO WEEK LIST</h1>
+    </nav>
+    
+    <section class="signLog">
+        <h2>LOGIN</h2>
+
+        <form class="signLogForm" action="/login" method="POST">
+            <input class="signupOrLogIn" type="email" name="email" placeholder="Email">
+            <input class="signupOrLogIn" type="password" name="password" placeholder="Password">
+            <button class="signupOrLogIn signLogBtn">Submit</button>
+        </form>
+
+        <% if (locals.messages.errors) { %>
+            <% messages.errors.forEach( el => { %>
+                <div><%= el.msg %></div>
+            <% }) %>
+        <% } %>
+
+        <% if (locals.messages.info) { %>
+        <% messages.info.forEach( el => { %>
             <div><%= el.msg %></div>
         <% }) %>
-    <% } %>
-
-    <% if (locals.messages.info) { %>
-     <% messages.info.forEach( el => { %>
-        <div><%= el.msg %></div>
-     <% }) %>
-    <% } %>
-    
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
-    </form>
+        <% } %>
+    </section>
 </body>
 </html>
