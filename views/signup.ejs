@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div><%= el.msg %></div>
-        <% }) %>
-    <% } %>
+     <nav>
+        <h1 class="title signLogTitle">TO DO WEEK LIST</h1>
+    </nav>
     
-    <form action="/signup" method="POST">
-        <input type="text" name="userName" placeholder="User Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit">
-    </form>
+    <section class="signLog">
+        <h2>SIGN UP</h2>
+
+        <form class="signLogForm" action="/signup" method="POST">
+            <input class="signupOrLogIn" type="text" name="userName" placeholder="User Name">
+            <input class="signupOrLogIn" type="email" name="email" placeholder="Email">
+            <input class="signupOrLogIn" type="password" name="password" placeholder="Password">
+            <input class="signupOrLogIn" type="password" name="confirmPassword" placeholder="Confirm Password">
+            <button class="signupOrLogIn signLogBtn">Submit</button>
+        </form>
+
+        <% if (locals.messages.errors) { %>
+            <% messages.errors.forEach( el => { %>
+                <div><%= el.msg %></div>
+            <% }) %>
+        <% } %>
+    </section>
 </body>
 </html>

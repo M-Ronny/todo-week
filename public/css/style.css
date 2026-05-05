@@ -10,6 +10,64 @@
 }
 
 /******************************************
+/* SIGNUP
+/*******************************************/
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.signLog {
+  margin: 0 37%;
+  margin-top: 5%;
+  padding-top: 1%;
+  width: 25%;
+  height: 320px;
+  border: solid #00529f 3px;
+  border-radius: 10px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.signLogTitle {
+  margin-left: 40%;
+}
+
+h2 {
+  text-align: center;
+  color: #febe10;
+}
+
+.signLogForm {
+  margin: 0 10%;
+}
+
+.signupOrLogIn {
+  display: block;
+  margin-bottom: 3%;
+  width: 100%;
+  border-radius: 3px;
+
+}
+
+.signLogBtn {
+  width: 75%;
+  margin: 0 13%;
+  border-radius: 10px;
+}
+
+div {
+  padding: 0 10%;
+  padding-top: 2%;
+  color: #00529f;
+}
+
+
+/******************************************
+/* TO DO WEEK
+/*******************************************/
+
+/******************************************
 /* LAYOUT
 /*******************************************/
 nav {
